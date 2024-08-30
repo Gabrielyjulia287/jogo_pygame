@@ -1,0 +1,134 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('images/projeto.jpg') no-repeat center center fixed;
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* Container principal */
+.container {
+    width: 80%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background: #c2d424;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #ffffff;
+}
+
+/* Navegação */
+nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+nav a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.2rem;
+    position: relative;
+}
+
+nav a:hover::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: #ffffff;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease;
+}
+
+nav a:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* Seção principal */
+main {
+    background: #09a9a4;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 20px;
+}
+
+/* Títulos */
+h2 {
+    color: #1e90ff;
+    margin-bottom: 15px;
+}
+
+/* Botões */
+button {
+    background: linear-gradient(to right, #1e90ff, #4682b4);
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(to right, #4682b4, #1e90ff);
+    transform: scale(1.05);
+}
+
+/* Rodapé */
+footer {
+    background: #da1616;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.3);
+}
+
+footer p {
+    color: #ffffff;
+}
+
+/* Efeitos de animação */
+@keyframes pulse {
+    0% {
+        background-color: #1e90ff;
+    }
+    50% {
+        background-color: #4682b4;
+    }
+    100% {
+        background-color: #1e90ff;
+    }
+}
+
+button:active {
+    animation: pulse 0.6s infinite;
+}
+

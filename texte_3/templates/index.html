@@ -1,0 +1,24 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página com Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao meu jogo</h1>
+    </header>
+    <main>
+        <p>Este é um exemplo de página com Flask.</p>
+        <form action="{{ url_for('start_game') }}" method="get">
+            <button type="submit">Iniciar Partida</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Minha aplicação web</p>
+    </footer>
+</body>
+</html>
